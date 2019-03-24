@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div style="flex-grow: 1;">
+    <div style="flex-grow: 1">
       <app-add-todo-item (onAddTodo)="addTodo($event)"></app-add-todo-item>
       <hr>
       <ng-container *ngIf="todos.length > 0">

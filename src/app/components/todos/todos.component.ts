@@ -20,9 +20,17 @@ export class TodosComponent implements OnInit {
   }
   
   deleteTodo(id: string) {
-    this.todos.forEach((todo, index, arr) => {
-      if (todo.id === id) arr.splice(index, 1);
-    });
+    // Удаление через forEach медленнее чем for на ~90%
+    // https://jsperf.com/arr-slice-zv
+    
+    for (let i = 0; i < this.todos.length; i++) {
+      if (this.todos[i].id === id) {
+        this.todos.splice(i, 1);
+        return;
+      }
+    }
+    
+    
   }
   
   completeAllTodos() {
