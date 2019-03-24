@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div style="flex-grow: 1;">
+      <app-add-todo-item (onAddTodo)="addTodo($event)"></app-add-todo-item>
+      <hr>
+      <ng-container *ngIf="todos.length > 0">
+        <div class="d-flex justify-content-end" style="margin-bottom: 5px">
+          <button class="btn btn-dark" (click)="completeAllTodos()">Завершить все задачи</button>
+        </div>
+      </ng-container>
+      <app-todo-item *ngFor="let todo of todos" [todo]="todo" (onDeleteTodo)="deleteTodo($event)" [todoCompleted] = "todo.completed"></app-todo-item>
+    </div>
+  </div>
+</div>
