@@ -29,8 +29,6 @@ export class TodosComponent implements OnInit {
         return;
       }
     }
-    
-    
   }
   
   completeAllTodos() {
