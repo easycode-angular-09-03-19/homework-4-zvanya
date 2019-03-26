@@ -36,5 +36,4 @@ export class TodosComponent implements OnInit {
       todo.completed = true;
     });
   }
-  
 }

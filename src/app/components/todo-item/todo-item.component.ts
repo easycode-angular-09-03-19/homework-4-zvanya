@@ -9,7 +9,7 @@ import { ITodo } from '../../interfaces/ITodo'
 export class TodoItemComponent implements OnInit, OnChanges {
  
   @Input() todo: ITodo;
-  @Input() todoCompleted: string;
+  @Input() todoCompleted: boolean;
   @Output() onDeleteTodo: EventEmitter<string> = new EventEmitter<string>();
   
   completeTag: string;
