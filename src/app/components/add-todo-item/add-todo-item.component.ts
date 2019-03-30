@@ -30,5 +30,4 @@ export class AddTodoItemComponent implements OnInit {
     this.todoName = '';
     this.todoDescription = '';
   }
-  
 }
